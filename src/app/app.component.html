@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+
+<input name="statusFilter" type="text" [(ngModel)]="statusFilter" autocomplete="off" />
+
+<div *ngFor="let status of userTestStatus | ngxAutocomplete:'name':statusFilter">
+    {{status.name}}
+</div>
